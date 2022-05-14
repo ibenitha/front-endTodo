@@ -11,7 +11,7 @@ function AddNew(props) {
         setnewTodo(event.target.value)
     }
   return (
-    <div>
+    <div className="inputs">
     <form onSubmit={handleAllChanges}>
         <input type="text" placeholder="Add New" value={newtodo} onChange={handleNewTodo} />
         <button type="submit">Add</button>
