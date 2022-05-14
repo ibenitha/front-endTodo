@@ -16,7 +16,7 @@ body {
   height: 100vh;
 }
 .black-Mode{
-  background: #000;
+  background: rgb(3, 3, 58);
   color: white;
 }
 code {
@@ -58,15 +58,54 @@ code {
   width: 40vw;
   border: 2px solid black;
   padding: 1em 2em;
+  height: 50vh;
+  overflow-y: scroll;
+}
+.Todo-hold::-webkit-scrollbar{
+  width: 5px;
+}
+.Todo-hold::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+.Todo-hold::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
 }
 .Todo{
   display: flex;
   justify-content: space-between;
   margin: 1em 0;
+  padding: 1.5em 1em;
 }
-.Todo p{
-  color: hotpink;
+.Todo button {
+  height: 5vh;
+  width: 5vh;
+  background: rgb(222, 222, 222);
+  outline: none;
+  border: none;
+  border-radius:12px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  /* padding: 1em; */
+  font-size: 0.8em;
 }
 .black-Mode .Todo-hold{
   border: 2px solid white;
+}
+.Todo_Completed{
+  background: green;
+  color: white;
+  font-weight: bold;
+}
+.CompletedBtn{
+  cursor: not-allowed;
+  color: rgba(0, 0, 0, 0.196);
+  background: white;
+}
+.Todo-P{
+  text-align: left;
+  padding: 0 0.5em;
+  width:20vw;
 }
