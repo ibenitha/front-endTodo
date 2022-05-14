@@ -2,7 +2,7 @@ import  React,{useState,useEffect} from 'react'
 import './App.css'
 import AddNew from './components/AddNew'
 import RenderTodo from './components/RenderTodo'
-import {FaToggleOn } from 'react-icons/fa'
+import {FaCopyright, FaHeartbeat, FaToggleOn } from 'react-icons/fa'
 function App() {
   const dummyTodo= [{id:1,completed:false,desc:"Lorem Ipsum"},{id:2,completed:false,desc:"Lorem Ipsum"},{id:3,complete:false,desc:"Lorem Ipsum"}]
   const [Todo,setTodo]=useState(dummyTodo)
@@ -61,10 +61,12 @@ function App() {
     <div className={`App ${theme && ' black-Mode'} `}>
       <div className="Title">
         <h1>My Tasks</h1>
-        <i className="fa fa-dark" onClick={()=>setTheme((prev)=>!prev)}><FaToggleOn/></i>
+        <i className="fa fa-dark" style={{'fontSize':'2em','cursor':'pointer'}} onClick={()=>setTheme((prev)=>!prev)}><FaToggleOn/></i>
       </div>
       <AddNew AddTodoList={AddTodoList} edit={edit} inputValues={inputValues} setInputValues={setInputValues} handleUpdateChanges={handleUpdateChanges}/>
       <RenderTodo Todo={Todo} handleComplete={handleComplete} DeleteTodo={DeleteTodo} UpdateTodo={UpdateTodo}/>
+      <div className="footer"><span>Made By <FaHeartbeat className='heart'/> by the Associates</span></div>
+      <div className="footer-second"><span><FaCopyright/> Brainiacs 2022</span></div>
     </div>
   )
 }
